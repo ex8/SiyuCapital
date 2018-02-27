@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+    <h1>About us</h1>
+    <p>
+        At Siyu Capital Insights, we digest the most pressing
+        and pertinent trends in the equity, bond, and derivatives
+        markets for you. Our weekly brief is geared at those who
+        are trying to deepen their understanding of and broaden
+        their interest in the world of investing and finance.
+        Insights are intended to develop a more comprehensive
+        investment view while underpinning sound personal finance
+        learning as well.
+    </p>
+    <p>
+        Our inspiration to write stems from daily engagement in
+        the investment space across the asset classes delineated
+        above. We take a granular, often esoteric look at specific
+        challenges in markets, but also keep an overall
+        macroeconomic sentiment at the core of our value proposition.
+    </p>
+    <p>
+        No portion of any writing either within the weekly brief or on
+        this website itself will ever take the form of actionable financial
+        advice. We are not certified financial planners, chartered financial
+        analysts, or chartered market technicians (although we’re
+        working on it). Go Bruins.
+    </p>
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'images/nick.jpg' %}" width="300px" height="300px">
+            <br />
+            <br />
+            <a href="mailto:nicholas.f.vanosdol@gmail.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://twitter.com/nickvanosdol" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/nicholasvanosdol/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="col">
+            <img src="{% static 'images/mark.jpg' %}" width="300px" height="300px">
+            <br />
+            <br />
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/markgrace95/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+    <p>
+    </p>
+{% endblock %}

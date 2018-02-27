@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} Newsletters {% endblock %}
+
+{% block content %}
+<h1>Newsletter ID: {{ newsletter.id }} | Title: {{ newsletter.title }}</h1>
+<span class="smalltext"><i class="fa fa-user"></i> Author: {{ newsletter.author }} | <i class="fa fa-calendar"></i> Created: {{ newsletter.created }}</span>
+<p>
+    {{ newsletter.content|safe }}
+</p>
+
+<br />
+<br />
+
+<h4><u>Comments</u></h4>
+{% for comment in comments %}
+    <b>Name: </b> {{ comment.name }} <br />
+    <b>Created: </b> {{ comment.created }} <br />
+    <b>Comment: </b> <br />
+    <p>{{ comment.body|safe }}</p> <br />
+    <br />
+    {% empty %}
+    No comments available. Be the first to commment!
+{% endfor %}
+
+
+<br />
+<br />
+
+<h5><u>Post a new comment</u></h5>
+<form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="Comment"/>
+</form>
+{% endblock %}

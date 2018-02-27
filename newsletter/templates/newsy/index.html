@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <h1>Subscribe</h1>
+<p><i>"A weekly brief on financial markets curated by daily market watchers.”</i></p>
+    <p>Add your email account to our recipient list to receive our weekly newsletter!</p>
+    <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Subscribe"/>
+    </form>
+    <p class="smalltext">
+        <b>Donate</b>
+        <br />
+        PayPal: <a href="https://www.paypal.me/nickvanosdol" target="_blank">https://www.paypal.me/nickvanosdol</a>
+        <br />
+        <a href="https://www.paypal.me/nickvanosdol" target="_blank">PayPal</a>
+        <br />
+        BTC: 1JFpnKeoSMdEnxfrdpVPWyKCAdESrLhi2v
+        <br />
+        BCH: 12QujKtc28FDaMMfTWKEXq1XkoUpsFNdnx
+    </p>
+{% endblock %}
